@@ -68,4 +68,9 @@ Rails.application.configure do
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
   config.hosts << "74e9232f14b24d7c926a6c53da2f4c1c.vfs.cloud9.us-east-2.amazonaws.com"
+  
+  # TURN ON INLINE SOURCE MAPS (SO WE CAN DEBUG RAILS 7 BOOTSTRAP)
+  config.sass.inline_source_maps = true
+  # Disable line comments
+  config.sass.line_comments = false
 end
