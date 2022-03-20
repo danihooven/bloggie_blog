@@ -12,6 +12,6 @@ Rails.application.config.assets.paths << Rails.root.join('app', 'assets', 'fonts
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
-Rails.application.config.assets.precompile += %w( application.css.scss icofont.css gordita-fonts.css bootstrap.min.js popper.js )
+Rails.application.config.assets.precompile += %w( application.css.scss gordita-fonts.css icofont.css plugins.min.css style.css bootstrap.min.js popper.js )
 
 
