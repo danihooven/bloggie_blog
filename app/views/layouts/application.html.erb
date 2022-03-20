@@ -6,7 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "icofont", "gordita-fonts", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
@@ -52,6 +52,15 @@
       </nav>
     </header>
     <!--======== End of header area  =========-->
+    
+    
+    <!--Icofont-->
+    <ul class="social-share-area mt-15 mb-15">
+        <li><a href="#"><i class="icofont-facebook"></i></a></li>
+        <li><a href="#"><i class="icofont-skype"></i></a></li>
+        <li><a href="#"><i class="icofont-twitter"></i></a></li>
+        <li><a href="#"><i class="icofont-linkedin"></i></a></li>
+    </ul>    
     
     <%= render 'layouts/messages' %>
     <%= yield %>

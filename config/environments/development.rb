@@ -73,4 +73,7 @@ Rails.application.configure do
   config.sass.inline_source_maps = true
   # Disable line comments
   config.sass.line_comments = false
+  
+  # Cannot render console. Recommended: Disable That whiny crap in the development environment
+  config.web_console.whiny_requests = false
 end

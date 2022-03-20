@@ -5,8 +5,13 @@ Rails.application.config.assets.version = "1.0"
 
 # Add additional assets to the asset load path.
 # Rails.application.config.assets.paths << Emoji.images_path
+    
+# Create new folder in app/assets and name it fonts
+Rails.application.config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
-Rails.application.config.assets.precompile += %w( application.css.scss bootstrap.min.js popper.js )
+Rails.application.config.assets.precompile += %w( application.css.scss icofont.css gordita-fonts.css bootstrap.min.js popper.js )
+
+
