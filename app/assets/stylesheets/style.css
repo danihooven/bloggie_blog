@@ -1670,7 +1670,7 @@ input[type="checkbox"] {
 =============================================*/
 .breadcrumb-area {
   background-color: #fafafa;
-  padding: 80px 0;
+  padding: 20px 0;
 }
 
 .breadcrumb-list {
@@ -3828,7 +3828,7 @@ input[type="checkbox"] {
   opacity: 1;
 }
 
-.navigation-menu > ul > li:hover > a:after, .navigation-menu > ul > li.active > a:after {
+.navigation-menu > ul > li:hover > a:after, .navigation-menu > ul > li > a:after {
   color: #ffc4a0;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -5563,6 +5563,10 @@ input[type="checkbox"] {
 .post-meta-right-side a {
   margin-left: 10px;
 }
+
+/*.post-meta-right-side a > img:hover {*/
+/*  color:#ffc4a0;*/
+/*}*/
 
 .hero-area-two-wrapper {
   position: relative;
@@ -9256,6 +9260,7 @@ input[type="checkbox"] {
 /*==================================
     27. Blog Details Area Css
 ====================================*/
+
 .blog-details-col-8 {
   max-width: 847px;
   -webkit-box-flex: 0;

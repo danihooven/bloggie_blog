@@ -1,24 +1,90 @@
-<h1>Articles Listing Page</h1>
+    <!-- breadcrumb-area start -->
+    <div class="breadcrumb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumb_box text-center">
+                         <h2 class="breadcrumb-title">Articles</h2> 
+                        <!-- breadcrumb-list start -->
+                        <!--<ul class="breadcrumb-list">-->
+                        <!--    <li> <%= link_to "Home", root_path, class:"breadcrumb-item" %> </li>-->
+                        <!--    <li> <%= link_to "Articles", root_path, class:"breadcrumb-item active" %> </li>-->
+                        <!--</ul>-->
+                        <!-- breadcrumb-list end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb-area end -->
 
-<table>
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Description</th>
-            <th colspan="3">Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <% @articles.each do |article| %>
-            <tr>
-                <td><%= article.title  %></td>
-                <td><%= article.description  %></td>
-                <td><%= link_to 'Show', article_path(article)%></td>
-                <td><%= link_to 'Edit', edit_article_path(article)%></td>
-                <td><%= link_to 'Delete', article_path(article), data: {"turbo-method": :delete, "turbo-confirm": "Are you sure?" }%></td>
-            </tr>
-        <% end %>
-    </tbody>
-</table>
 
-<p><%= link_to 'Create new article', new_article_path %></p>
+
+<!-- Blog Details Wrapper Start -->
+<div class="blog-details-wrapper section-space--ptb_80">
+    <div class="container">
+        <div class="row row--17">
+            <!--Article Grid-->
+            <% @articles.each do |article| %>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <!-- Single Following Post Start -->
+                <div class="single-following-post"> <!-- data-aos="fade-up" -->
+                    <%= link_to article_path(article), class:"following-post-thum" do %>
+                        <%= image_tag("blog/01.jpg", :alt => "meditation") %>
+                    <% end %>
+                    <div class="following-post-content">
+                        <div class="following-blog-post-top">
+                            <div class="trending-blog-post-category">
+                                <a href="#" class="business">Business</a>
+                            </div>
+                            <div class="following-blog-post-author">
+                                By <a href="#">Dani Hooven</a>
+                            </div>
+                        </div>
+                        <h5 class="following-blog-post-title">
+                            <%= link_to article.title,  article_path(article) %>
+                        </h5>
+                        <p> <%= truncate(article.description, length:50) %> </p>
+                        <div class="following-blog-post-meta">
+                            <div class="post-meta-left-side">
+                                <span class="post-date">
+                                   <%= article.created_at.strftime("%B %d, %Y") %>
+                                </span>
+                            </div>
+                            <div class="post-meta-right-side">
+                                <%= link_to (image_tag 'icons/edit.png', :alt => "edit"), edit_article_path(article) %>
+                                <%= link_to (image_tag 'icons/delete.png', :alt => "delete"), article_path(article), data: {"turbo-method": :delete, "turbo-confirm": "Are you sure?" } %>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Single Following Post End -->
+            </div>
+            <% end %>
+        </div>
+    </div>
+</div> <!-- Blog Details Wrapper End -->
+
+
+<!--<h1>Articles Listing Page</h1>-->
+<!--<table>-->
+<!--    <thead>-->
+<!--        <tr>-->
+<!--            <th>Title</th>-->
+<!--            <th>Description</th>-->
+<!--            <th colspan="3">Actions</th>-->
+<!--        </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--        <% @articles.each do |article| %>-->
+<!--            <tr>-->
+<!--                <td><%= article.title  %></td>-->
+<!--                <td><%= article.description  %></td>-->
+<!--                <td><%= link_to 'Show', article_path(article)%></td>-->
+<!--                <td><%= link_to 'Edit', edit_article_path(article)%></td>-->
+<!--                <td><%= link_to 'Delete', article_path(article), data: {"turbo-method": :delete, "turbo-confirm": "Are you sure?" }%></td>-->
+<!--            </tr>-->
+<!--        <% end %>-->
+<!--    </tbody>-->
+<!--</table>-->
+
+<!--<p><%= link_to 'Create new article', new_article_path %></p>-->
