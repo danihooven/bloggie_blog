@@ -12,42 +12,18 @@
 
   <body>
     
-    <!--========  Header Area =========-->
-    <header class="header">
-      <div class="header-top-menu-list">
-          <div class="container">
-              <div class="header-style-center">
-                  <div class="logo">
-                      <a href="#"><%= image_tag "logo/logo.png" %></a>
-                  </div>
-                  <div class="header-mid-right-side">
-                    <a class="single-action-item btn">Login</a>
-                    <!--Show on Login-->
-                    <!--<a href="#" class="single-action-item"><%= image_tag "icons/notification.png" %></a>-->
-                    <!--<a href="register.html" class="single-action-item"><%= image_tag "icons/user.png" %></a>      -->
-                    <!-- mobile menu -->
-                    <!--<div class="mobile-navigation-icon d-block d-lg-none" id="mobile-menu-trigger">-->
-                    <!--      <i></i>-->
-                    <!--</div>-->
-                  </div>
-              </div>
-          </div>
-        </div>
-    </header>
-    <!--======== End of Header Area  =========-->
+    <%= render 'layouts/header' %>'
     
     <!--========  Main Area =========-->
     <div id="main-wrapper">
       <div class="site-wrapper-reveal">
-        <div class="hero-area">
-          <div class="container">
             <%= render 'layouts/messages' %>
             <%= yield %>
-          </div>
-        </div>
       </div>
     </div>
     <!--========  End of Main Area =========-->
+    
+    <%= render 'layouts/footer' %>
     
     
 

@@ -1,0 +1,102 @@
+<!--========  Header Area =========-->
+    <header class="header">
+        <div class="header-mid-area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!--Logo-->
+                    <div class="col-lg-3 col-md-2 col-5">
+                        <div class="logo">
+                            <%= link_to image_tag("logo/logo.png", :alt => "Bloggie Blog Logo"), root_path %>
+                        </div>
+                    </div>
+                    <!--Advertisement-->
+                    <div class="col-lg-6 col-md-6 d-md-block d-none">
+                        <div class="header-add-banner text-center">
+                           <%= link_to root_path do%>
+                                <%= image_tag "banners/header-add-banner.jpg" %>
+                                <h6 class="header-add-text">All Food Item
+                                  <span>50% Off</span>
+                                </h6>
+                           <% end %>   
+                        </div>
+                    </div>
+                    <!--Top Right Icons-->
+                    <div class="col-lg-3 col-md-4 col-7">
+                        <div class="header-mid-right-side">
+                            <%= link_to image_tag("icons/search.png", :alt => "Search Icon"), root_path, id:"search-overlay-trigger", class:"single-action-item"  %>
+                            <!-- href="javascript:void(0)"-->
+                            <%= link_to image_tag("icons/notification.png", :alt => "Notification Icon"), root_path, id:"search-overlay-trigger", class:"single-action-item"  %>
+                            <%= link_to image_tag("icons/bookmark.png", :alt => "Bookmark Icon"), root_path, id:"search-overlay-trigger", class:"single-action-item"  %>
+                            <%= link_to image_tag("icons/user.png", :alt => "User Icon"), root_path, id:"search-overlay-trigger", class:"single-action-item"  %>
+                        </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom-area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!--Social Icons-->
+                    <div class="col-lg-4 col-9">
+                        <ul class="social-share-area mt-15 mb-15">
+                            <li><%= link_to "https://www.facebook.com", :target => "_blank" do%><i class="icofont-facebook"></i><% end %></li>                            
+                            <li><%= link_to "https://www.instagram.com", :target => "_blank" do%><i class="icofont-instagram"></i><% end %></li>                            
+                            <li><%= link_to "https://www.twitter.com", :target => "_blank" do%><i class="icofont-twitter"></i><% end %></li>                            
+                            <li><%= link_to "https://www.linkedin.com", :target => "_blank" do%><i class="icofont-linkedin"></i><% end %></li>                              
+                        </ul>
+                    </div>
+                    <div class="col-lg-8 col-3">
+                        <div class="main-menu-area text-end">
+                            <nav class="navigation-menu">
+                                <ul>
+                                    <li> <!-- class="has-children" -->
+                                        <%= link_to root_path do%><span>Home</span><% end %>
+                                        <!-- <ul class="submenu">
+                                            <li><a href="index-2.html"><span>Home Two</span></a></li>
+                                            <li><a href="index-3.html"><span>Home Three</span></a></li>
+                                            <li><a href="index-4.html"><span>Home Four</span></a></li>
+                                            <li><a href="index-5.html"><span>Home Five</span></a></li>
+                                            <li><a href="index-6.html"><span>Home Six</span></a></li>
+                                        </ul> -->
+                                    </li>
+                                    <li>
+                                        <%= link_to root_path do%><span>About</span><% end %>
+                                    </li>
+                                    <li class="has-children">
+                                        <%= link_to articles_path do%><span>Artcles</span><% end %>
+                                        <ul class="submenu">
+                                            <li><%= link_to articles_path do%><span>All</span><% end %></li>
+                                            <li><%= link_to articles_path do%><span>Business</span><% end %></li>
+                                            <li><%= link_to articles_path do%><span>Travel</span><% end %></li>
+                                            <li><%= link_to articles_path do%><span>Health</span><% end %></li>
+                                            <li><%= link_to articles_path do%><span>Tech</span><% end %></li>
+                                        </ul>
+                                    </li>
+                                    <!--<li class="has-children">-->
+                                    <!--    <a href="#"><span>Pages</span></a>-->
+                                    <!--    <ul class="submenu">-->
+                                    <!--        <li><a href="blog-details.html"><span>Blog Details</span></a> </li>-->
+                                    <!--        <li><a href="blog-details-two.html"><span>Blog Details Two</span></a> </li>-->
+                                    <!--        <li><a href="error-404.html"><span>Error 404</span></a> </li>-->
+                                    <!--        <li><a href="faq.html"><span>FAQ's</span></a> </li>-->
+                                    <!--        <li><a href="author-post.html"><span>Author post</span></a> </li>-->
+                                    <!--        <li><a href="register.html"><span>Register</span></a> </li>-->
+                                    <!--        <li><a href="write-post.html"><span>Write Post</span></a> </li>-->
+                                    <!--    </ul>-->
+                                    <!--</li>-->
+                                    <!--<li><a href="contact-us.html"><span>Contact </span></a></li>-->
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- mobile menu -->
+                        <div class="mobile-menu-right">
+                            <div class="mobile-navigation-icon d-block d-lg-none" id="mobile-menu-trigger">
+                                <i></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--======== End of Header Area  =========-->

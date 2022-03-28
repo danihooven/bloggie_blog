@@ -1,0 +1,116 @@
+<!-- Hero Area Start -->
+<div class="hero-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="hero-inner-area">
+                    
+                    
+                    <!-- Hero Category Area Start -->
+                    <div class="hero-category-area">
+                        <%= link_to root_path, class:"single-hero-category-item" do%> <!--data-aos="fade-up"-->
+                            <%= image_tag("catagory/technology.jpg", :alt => "Business Category") %>
+                            <div class="hero-category-inner-box">
+                                <h3 class="title">Business</h3>
+                                <i class="icon icofont-long-arrow-right"></i>
+                            </div>
+                        <% end %><%= link_to root_path, class:"single-hero-category-item" do%>
+                        <%= image_tag("catagory/travel.jpg", :alt => "Travel Category") %> <!--data-aos="fade-up"-->
+                            <div class="hero-category-inner-box">
+                                <h3 class="title">Travel</h3>
+                                <i class="icon icofont-long-arrow-right"></i>
+                            </div>
+                        <% end %><%= link_to root_path, class:"single-hero-category-item" do%>
+                        <%= image_tag("catagory/medical.jpg", :alt => "Health Category") %> <!--data-aos="fade-up"-->
+                            <div class="hero-category-inner-box">
+                                <h3 class="title">Health</h3>
+                                <i class="icon icofont-long-arrow-right"></i>
+                            </div>
+                        <% end %><%= link_to root_path, class:"single-hero-category-item" do%>
+                        <%= image_tag("catagory/web.jpg", :alt => "Technology Category") %> <!--data-aos="fade-up"-->
+                            <div class="hero-category-inner-box">
+                                <h3 class="title">Tech</h3>
+                                <i class="icon icofont-long-arrow-right"></i>
+                            </div>
+                        <% end %>
+                    </div><!-- Hero Category Area End -->
+
+
+                     <!--Hero Banner Area Start -->
+                    <div class="hero-banner-area"> <!-- data-aos="fade-up" -->
+                        <%= link_to image_tag("hero/hero-01.jpg", :alt => "A healthy salad"), root_path %>
+                    </div><!-- Hero Banner Area End -->
+
+
+                    <div class="hero-blog-post">
+                        <!--Single-hero-blog-post Start -->
+                        <div class="single-hero-blog-post"> <!--data-aos="fade-up"-->
+                            <div class="hero-blog-post-top">
+                                <div class="hero-blog-post-category">
+                                    <a href="#" class="business">Business</a>
+                                </div>
+                                <div class="hero-blog-post-author">
+                                    By <%= link_to "Dani Hooven", root_path %>
+                                </div>
+                            </div>
+                            <h3 class="hero-blog-post-title">
+                                <%= link_to "Make your store stand out
+                                    from the others...", root_path %>
+                            </h3>
+                            <p class="post-short-details">
+                                Lorem Ipsum has been them industr standard
+                                unknown printer took galley.
+                            </p>
+                            <div class="hero-blog-post-meta">
+                                <div class="post-meta-left-side">
+                                    <span class="post-date">
+                                    <i class="icofont-ui-calendar"></i> 
+                                    <%= link_to "03 April, 2021", root_path %>
+                                </span>
+                                    <span>10 min read</span>
+                                </div>
+                                <div class="post-meta-right-side">
+                                    <%= link_to (image_tag 'icons/small-bookmark.png'), root_path %>
+                                    <%= link_to (image_tag 'icons/heart.png'), root_path %>
+                                </div>
+                            </div>
+                        </div><!-- Single-hero-blog-post End -->
+                        
+                         <!--Single-hero-blog-post Start -->
+                        <div class="single-hero-blog-post"> <!--data-aos="fade-up"-->
+                            <div class="hero-blog-post-top">
+                                <div class="hero-blog-post-category">
+                                    <a href="#" class="tech">Tech</a>
+                                </div>
+                                <div class="hero-blog-post-author">
+                                    By <%= link_to "Dani Hooven", root_path %>
+                                </div>
+                            </div>
+                            <h3 class="hero-blog-post-title">
+                                <%= link_to "WooCommerce comes with
+                                    an intuitive drag-and-drop...", root_path %>
+                            </h3>
+                            <p class="post-short-details">
+                                Lorem Ipsum has been them industr standard
+                                unknown printer took galley.
+                            </p>
+                            <div class="hero-blog-post-meta">
+                                <div class="post-meta-left-side">
+                                    <span class="post-date">
+                                    <i class="icofont-ui-calendar"></i> 
+                                    <%= link_to "03 April, 2021", root_path %>
+                                </span>
+                                    <span>10 min read</span>
+                                </div>
+                                <div class="post-meta-right-side">
+                                    <%= link_to (image_tag 'icons/small-bookmark.png'), root_path %>
+                                    <%= link_to (image_tag 'icons/heart.png'), root_path %>
+                                </div>
+                            </div>
+                        </div><!-- Single-hero-blog-post End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- Hero Area End -->

@@ -1,0 +1,104 @@
+    <!--======  footer area =======-->
+    <footer class="footer-area footer-one">
+        <div class="footer-top-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <%= link_to image_tag("logo/logo-white.png", :alt => "Bloggie Blog Logo"), root_path %>
+                            </div>
+                            <p>Lorem Ipsum is simply dummy text
+                                the printing and typesetting industry
+                                has been the industry's standard
+                                text ever since.
+                            </p>
+                            <!--Social Icons-->
+                            <ul class="footer-socail-share">
+                                <li><%= link_to "https://www.facebook.com", :target => "_blank" do%><i class="icofont-facebook"></i><% end %></li>                            
+                                <li><%= link_to "https://www.instagram.com", :target => "_blank" do%><i class="icofont-instagram"></i><% end %></li>                            
+                                <li><%= link_to "https://www.twitter.com", :target => "_blank" do%><i class="icofont-twitter"></i><% end %></li>                            
+                                <li><%= link_to "https://www.linkedin.com", :target => "_blank" do%><i class="icofont-linkedin"></i><% end %></li> 
+                            </ul>
+                        </div>
+                    </div>
+                    <!--Subscribe Form - Not Activated-->
+                    <div class="col-lg-4  col-md-6">
+                        <div class="footer-widget footer-subscribe-center">
+                            <div class="footer-widget-title">
+                                <h4 class="title">Subscribe</h4>
+                            </div>
+                            <div class="footer-subscribe-wrap">
+                                <div class="single-input">
+                                    <input type="text" placeholder="Your Name">
+                                </div>
+                                <div class="single-input">
+                                    <input type="email" placeholder="Email Address">
+                                </div>
+                                <div class="button-box">
+                                    <button class="btn-primary btn-large" type="submit">Subscribe Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="footer-menu-widget">
+                            <div class="single-footer-menu">
+                                <div class="footer-widget-title">
+                                    <h4 class="title">Company</h4>
+                                </div>
+                                <ul class="footer-widget-menu-list">
+                                    <li><%= link_to "About Us", root_path %></li>
+                                    <li><%= link_to "Contact Us", root_path %></li>
+                                    <li><%= link_to "Local Print Ads", root_path %></li>
+                                    <li><%= link_to "FAQ's", root_path %></li>
+                                    <li><%= link_to "Careers", root_path %></li>
+                                </ul>
+                            </div>
+                            <div class="single-footer-menu">
+                                <div class="footer-widget-title">
+                                    <h4 class="title">Quick Links</h4>
+                                </div>
+                                <ul class="footer-widget-menu-list">
+                                    <li><%= link_to "Privacy Policy", root_path %></li>
+                                    <li><%= link_to "Discussion", root_path %></li>
+                                    <li><%= link_to "Terms & Conditions", root_path %></li>
+                                    <li><%= link_to "Customer Support", root_path %></li>
+                                    <li><%= link_to "Course FAQ’s", root_path %></li>
+                                </ul>
+                            </div>
+                            <div class="single-footer-menu">
+                                <div class="footer-widget-title">
+                                    <h4 class="title">Category</h4>
+                                </div>
+                                <ul class="footer-widget-menu-list">
+                                    <li><%= link_to "Business", articles_path %></li>
+                                    <li><%= link_to "Travel", articles_path %></li>
+                                    <li><%= link_to "Health", articles_path %></li>
+                                    <li><%= link_to "Tech", articles_path %></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-bottom-inner">
+                            <div class="copy-right-text">
+                                <p>© 2021 Theme provided by <%= link_to "Bunzo", "https://hasthemes.com/", :target => "_blank" %>                            
+                                </br>© 2022 Functionality developed by <%= link_to "Dani Hooven", "mailto:hooven03@mail.franklin.ed", :target => "_blank" %></p>
+                            </div>
+                            <div class="button-right-box">
+                                <%= link_to root_path, class:"btn-primary btn-large" do%>Share your thinking <i class="icofont-long-arrow-right"></i><% end %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--=====  End of footer area ========-->

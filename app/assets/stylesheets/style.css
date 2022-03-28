@@ -1944,17 +1944,6 @@ input[type="checkbox"] {
   color: #ffffff;
 }
 
-.marketing {
-  background-color: #fdf0e8;
-  color: #c49076;
-  border-radius: 15px;
-}
-
-.marketing:hover {
-  background-color: #c49076;
-  color: #ffffff;
-}
-
 .javaScript {
   background-color: #ffe7da;
   color: #fe8e4b;
@@ -1966,88 +1955,46 @@ input[type="checkbox"] {
   color: #ffffff;
 }
 
-.lifestyle {
-  background-color: #e1fae3;
-  color: #1f9a39;
-  border-radius: 15px;
-}
-
-.lifestyle:hover {
-  background-color: #1f9a39;
-  color: #ffffff;
-}
-
-.fashion {
-  background-color: #ffebdf;
-  border-radius: 15px;
-}
-
-.fashion:hover {
-  color: #fff;
-  background-color: #f3d6c5;
-}
-
-.health {
-  background-color: #dcf1ff;
-  border-radius: 15px;
-}
-
 .travel {
-  background-color: #ffe6af;
-  border-radius: 15px;
-}
-
-.business {
-  background-color: #e1f3ff;
-  border-radius: 15px;
-}
-
-.food {
-  background-color: #f9e7a0;
-  border-radius: 15px;
-}
-
-.lifesytle {
-  background-color: #ffebde;
-  border-radius: 15px;
-}
-
-.tech {
-  background-color: #ffebdf;
-  border-radius: 15px;
-}
-
-.tech:hover {
-  color: #222;
-}
-
-.marketing {
-  background-color: #fce7e7;
-  border-radius: 15px;
-  color: #222;
-}
-
-.marketing:hover {
-  color: #222;
-}
-
-.doctor {
   background-color: #e6f9ed;
   border-radius: 15px;
   color: #222;
 }
 
-.doctor:hover {
+.travel:hover {
+  background-color: #9fffc2;
+  color: #222;
+}
+
+.business {
+  background-color: #e1f3ff;
+  border-radius: 15px;
+  color: #222;
+}
+
+.business:hover {
+  background-color: #98d5fd;
   color: #222;
 }
 
 .health {
-  background-color: #eaf6fd;
+  background-color: #faf5e2;
   border-radius: 15px;
   color: #222;
 }
 
 .health:hover {
+  background-color: #f9e7a0;
+  color: #222;
+}
+
+.tech {
+  background-color: #fcd5d5;
+  border-radius: 15px;
+  color: #222;
+}
+.tech:hover {
+  background-color: #fd9c9c;
   color: #222;
 }
 
@@ -5540,7 +5487,7 @@ input[type="checkbox"] {
 
 .hero-blog-post-category a {
   min-width: 100px;
-  background: #ffebdf;
+  /*background: #ffebdf;*/
   text-align: center;
   padding: 6px 5px;
   border-radius: 10px;
