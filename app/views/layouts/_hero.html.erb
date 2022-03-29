@@ -54,8 +54,7 @@
                                 </div>
                             </div>
                             <h3 class="hero-blog-post-title">
-                                <%= link_to "Make your store stand out
-                                    from the others...", root_path %>
+                                <%= link_to "Make your store stand out from others", articles_path %>
                             </h3>
                             <p class="post-short-details">
                                 Lorem Ipsum has been them industr standard
@@ -67,11 +66,10 @@
                                     <i class="icofont-ui-calendar"></i> 
                                     <%= link_to "03 April, 2021", root_path %>
                                 </span>
-                                    <span>10 min read</span>
                                 </div>
                                 <div class="post-meta-right-side">
-                                    <%= link_to (image_tag 'icons/edit.png', :alt => "edit"), root_path %>
-                                    <%= link_to (image_tag 'icons/delete.png', :alt => "delete"), root_path %>
+                                    <%= link_to (image_tag 'icons/edit.png', :alt => "edit"), articles_path %>
+                                    <%= link_to (image_tag 'icons/delete.png', :alt => "delete"), articles_path, data: {"turbo-method": :delete, "turbo-confirm": "Are you sure?" } %>
                                 </div>
                             </div>
                         </div><!-- Single-hero-blog-post End -->
@@ -100,7 +98,6 @@
                                     <i class="icofont-ui-calendar"></i> 
                                     <%= link_to "03 April, 2021", root_path %>
                                 </span>
-                                    <span>10 min read</span>
                                 </div>
                                 <div class="post-meta-right-side">
                                     <%= link_to (image_tag 'icons/edit.png', :alt => "edit"), root_path %>

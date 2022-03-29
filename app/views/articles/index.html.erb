@@ -1,30 +1,16 @@
-    <!-- breadcrumb-area start -->
-    <div class="breadcrumb-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="breadcrumb_box text-center">
-                         <h2 class="breadcrumb-title">Articles</h2> 
-                        <!-- breadcrumb-list start -->
-                        <!--<ul class="breadcrumb-list">-->
-                        <!--    <li> <%= link_to "Home", root_path, class:"breadcrumb-item" %> </li>-->
-                        <!--    <li> <%= link_to "Articles", root_path, class:"breadcrumb-item active" %> </li>-->
-                        <!--</ul>-->
-                        <!-- breadcrumb-list end -->
-                    </div>
+<!-- Blog Details Wrapper Start -->
+<div class="blog-details-wrapper">
+    <div class="container">
+        <!--Title-->
+        <div class="row section-space--pb_60">
+            <div class="col-12">
+                <div class="share-thinking-title text-center">
+                    <h2 class="title">Articles</h2>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- breadcrumb-area end -->
-
-
-
-<!-- Blog Details Wrapper Start -->
-<div class="blog-details-wrapper section-space--ptb_80">
-    <div class="container">
+        <!--Article Grid-->
         <div class="row row--17">
-            <!--Article Grid-->
             <% @articles.each do |article| %>
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <!-- Single Following Post Start -->
@@ -65,26 +51,4 @@
 </div> <!-- Blog Details Wrapper End -->
 
 
-<!--<h1>Articles Listing Page</h1>-->
-<!--<table>-->
-<!--    <thead>-->
-<!--        <tr>-->
-<!--            <th>Title</th>-->
-<!--            <th>Description</th>-->
-<!--            <th colspan="3">Actions</th>-->
-<!--        </tr>-->
-<!--    </thead>-->
-<!--    <tbody>-->
-<!--        <% @articles.each do |article| %>-->
-<!--            <tr>-->
-<!--                <td><%= article.title  %></td>-->
-<!--                <td><%= article.description  %></td>-->
-<!--                <td><%= link_to 'Show', article_path(article)%></td>-->
-<!--                <td><%= link_to 'Edit', edit_article_path(article)%></td>-->
-<!--                <td><%= link_to 'Delete', article_path(article), data: {"turbo-method": :delete, "turbo-confirm": "Are you sure?" }%></td>-->
-<!--            </tr>-->
-<!--        <% end %>-->
-<!--    </tbody>-->
-<!--</table>-->
-
-<!--<p><%= link_to 'Create new article', new_article_path %></p>-->
+<p><%= link_to 'Create new article', new_article_path %></p>
