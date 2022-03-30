@@ -1740,18 +1740,34 @@ input[type="checkbox"] {
   border: none;
 }
 
+.btn-secondary {
+  background: none;
+  font-weight: 500;
+  border-radius: 10px;
+  color: #22262a;
+  border: 1px solid #22262a;
+}
+
+.btn-secondary:hover {
+  background: none;
+  color: #ffc4a0;
+  border: 1px solid #ffc4a0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .btn-primary:focus {
   outline: none !important;
 }
 
-.btn-primary:hover, .btn-primary:focus {
+.btn-primary:hover {
   background: #d4966f;
   color: #000000;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.btn-primary i {
+.btn-primary i, .btn-secondary i {
   margin-left: 10px;
   font-size: 22px;
 }
@@ -1852,23 +1868,23 @@ input[type="checkbox"] {
 }
 
 .btn-outline-2 {
-  border: 2px solid #ddd;
+  border: 1px solid #2d3135;
   border-radius: 10px;
-  color: #ffffff;
+  color: #22262a;
   padding-bottom: 2px;
-  color: #ff7d6b;
 }
 
 .btn-outline-2:hover {
   color: #ffffff;
-  border: 2px solid #ff7d6b;
-  background-color: #ff7d6b;
+  /*border: 2px solid #ff7d6b;*/
+  background-color: #2d3135;
 }
 
 .btn-large {
   padding: 0 30px;
   height: 60px;
   line-height: 60px;
+  margin: 0 20px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -1961,7 +1977,7 @@ input[type="checkbox"] {
 }
 
 .travel {
-  background-color: #e6f9ed;
+  background-color: #E6EEC0;
   border-radius: 15px;
   color: #222;
 }
@@ -1972,7 +1988,7 @@ input[type="checkbox"] {
 }
 
 .business {
-  background-color: #e1f3ff;
+  background-color: #FDE1E7;
   border-radius: 15px;
   color: #222;
 }
@@ -1983,7 +1999,7 @@ input[type="checkbox"] {
 }
 
 .health {
-  background-color: #faf5e2;
+  background-color: #d4eeec;
   border-radius: 15px;
   color: #222;
 }
@@ -1994,7 +2010,7 @@ input[type="checkbox"] {
 }
 
 .tech {
-  background-color: #fcd5d5;
+  background-color: #E3D7F0;
   border-radius: 15px;
   color: #222;
 }
@@ -7105,6 +7121,10 @@ input[type="checkbox"] {
   border-left: 1px solid #dadada;
 }
 
+.site-wrapper-reveal {
+  padding-bottom: 80px;
+}
+
 /*==================================
     14. From Following Area Css
 ====================================*/
@@ -10451,7 +10471,7 @@ input[type="checkbox"] {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 50px;
+  margin: 50px 0;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px) {

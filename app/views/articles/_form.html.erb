@@ -7,26 +7,45 @@
     </ul>
 <% end %>
 
+
+<%= form_with(model: @article, local: true) do |f|%>
+
+<!--Title-->
 <div class="row">
-    <!--<div class="col-lg-2">-->
-    <!--    <div class="title-write">-->
-    <!--        <p>Write Your Title</p>-->
-    <!--    </div>-->
-    <!--</div>-->
-    <!--<div class="col-lg-10">-->
-        <div class="write-content-box title-input">
-            <input type="text" placeholder="Enter your title here.">
+    <div class="col-lg-3">
+        <div class="title-write">
+            <p>Title</p>
         </div>
-    <!--</div>-->
+    </div>
+    <div class="col-lg-9">
+        <div class="write-content-box title-input">
+            <%= f.text_field :title, :placeholder => "Enter your title here" %>
+        </div>
+    </div>
 </div>
 
+<!--Description-->
 <div class="row">
-    <!--<div class="col-lg-2">-->
-    <!--    <div class="title-write">-->
-    <!--        <p>Tag</p>-->
-    <!--    </div>-->
-    <!--</div>-->
-    <!--<div class="col-lg-10">-->
+    <div class="col-lg-3">
+        <div class="title-write">
+            <p>Description</p>
+        </div>
+    </div>
+    <div class="col-lg-9">
+        <div class="write-content-box">
+            <%= f.text_area :description, rows:15, placeholder:"Lorem Ipsum and All That Jazzzzzzzzzzzzzzz." %>
+        </div>
+    </div>
+</div>
+
+<!--Tags-->
+<div class="row">
+    <div class="col-lg-3">
+        <div class="title-write">
+            <p>Tags</p>
+        </div>
+    </div>
+    <div class="col-lg-9">
         <div class="write-content-box tags-radio d-flex justify-content-around">
             <!--business-->
             <input type="radio" id="radio-business" value="business" name="tag">
@@ -40,45 +59,18 @@
             <!--technology-->
             <input type="radio" id="radio-tech" value="tech" name="tag">
             <label for="radio-tech" class="tech">Tech</label>
-            
-        <!--</div>-->
+        </div>
     </div>
 </div>
 
-<div class="row">
-    <!--<div class="col-lg-2">-->
-    <!--    <div class="title-write">-->
-    <!--        <p>Description</p>-->
-    <!--    </div>-->
-    <!--</div>-->
-    <!--<div class="col-lg-10">-->
-        <div class="write-content-box">
-            <textarea rows="25">Lorem Ipsum and All That Jazzzzzzzzzzzzzzz.</textarea>
-        </div>
-    <!--</div>-->
-</div>
+<hr>
 
+<!--Buttons-->
 <div class="conditon-buttom-wrap">
 
     <div class="button-box">
-        <a href="#" class="btn-large btn-primary">Publish Now</a>
+        <%= f.submit class:"btn-large btn-primary" %>
+        <%= link_to 'Cancel', articles_path, class:"btn-large btn-secondary"%>
     </div>
 </div>
-
-
-
-<!--<%= form_with(model: @article, local: true) do |f|%>-->
-
-<!--    <p>-->
-<!--        <%= f.label :title %><br/>-->
-<!--        <%= f.text_field :title %>-->
-<!--    </p>    -->
-<!--    <p>-->
-<!--        <%= f.label :description %><br/>-->
-<!--        <%= f.text_area :description %>-->
-<!--    </p>-->
-<!--    <p>-->
-<!--        <%= f.submit %>-->
-<!--    </p>-->
-
-<!--<% end %>-->
+<% end %>

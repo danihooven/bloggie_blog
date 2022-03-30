@@ -38,8 +38,8 @@
                                 </span>
                             </div>
                             <div class="post-meta-right-side">
-                                <%= link_to (image_tag 'icons/edit.png', :alt => "edit"), edit_article_path(article) %>
-                                <%= link_to (image_tag 'icons/delete.png', :alt => "delete"), article_path(article), data: {"turbo-method": :delete, "turbo-confirm": "Are you sure?" } %>
+                                <%= link_to edit_article_path(article) do%><i class="icofont-edit-alt"></i><% end %>
+                                <%= link_to article_path(article), data: {"turbo-method": :delete, "turbo-confirm": "Are you sure?" } do%><i class="icofont-ui-delete"></i><% end %>
                             </div>
                         </div>
                     </div>
