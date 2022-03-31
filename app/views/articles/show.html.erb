@@ -1,14 +1,101 @@
 <div class="share-your-thinking-area">
     <div class="container">
+        
+        <div class="row section-space--pb_50">
+            <div class="col-12">
+                <div class="share-thinking-title">
+                    <h2 class="title text-center"><%= @article.title %></h2>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Blog Details Wrapper Start -->
+        <div class="blog-details-wrapper">
+            <div class="container">
+                
+                    <!-- blog details Post Start -->
+                    <div class="blog-details-post-wrap">
+                        
+                        <!--Image-->
+                        <div class="blog-details-thumb">
+                            <%= image_tag("blog/blog-details-1.jpg", :alt => "business meeting") %>
+                        </div>
+                        <div class="blog-details-post-content">
+                            
+                            <div class="blog-details-meta-box">
+                                
+                                <div class="post-meta-left-side mb-2">
+                                    <!--Tag-->
+                                    <div class="trending-blog-post-category">
+                                        <a href="#" class="business">Business</a>
+                                    </div>
+                                    <!--Author-->
+                                    <div class="following-blog-post-author">
+                                         By <a href="#">Dani Hooven</a>
+                                    </div>
+                                </div>
 
-    <h1>Showing article details</h1>
+                                <div class="post-meta-right-side mb-2">
+                                    <!--Date-->
+                                    <span class="post-date">
+                                        <%= @article.created_at.strftime("%B %d, %Y") %>
+                                    </span>
+                                    <!--Edit / Delete-->
+                                    <%= link_to edit_article_path(@article) do%><i class="icofont-edit-alt"></i><% end %>
+                                    <%= link_to article_path(@article), data: {"turbo-method": :delete, "turbo-confirm": "Are you sure?" } do%><i class="icofont-ui-delete"></i><% end %>
+                                </div>
+                            </div> <!-- End Blog Details Meta Box -->
+
+                            <!--Article Details-->
+                            <div class="post-details-text">
+                                <p><%= simple_format(@article.description) %></p>
+                            </div> <!-- End post details text -->
+                            
+                            </br>
+                            <hr>
+
+                            <!-- Comment Area Start -->
+                            <!--<div class="comment-area section-space--pt_40">-->
+                            <!--    <div class="section-title">-->
+                            <!--        <h3 class="title">Leave a comment</h3>-->
+                            <!--    </div>-->
+                            <!--    <form action="#" class="comment-form-area">-->
+                            <!--        <div class="row">-->
+                            <!--            <div class="col-lg-6">-->
+                            <!--                <div class="single-input">-->
+                            <!--                    <input type="text" placeholder="Name">-->
+                            <!--                </div>-->
+                            <!--            </div>-->
+                            <!--            <div class="col-lg-6">-->
+                            <!--                <div class="single-input">-->
+                            <!--                    <input type="email" placeholder="Email">-->
+                            <!--                </div>-->
+                            <!--            </div>-->
+                            <!--            <div class="col-lg-12">-->
+                            <!--                <div class="single-input">-->
+                            <!--                    <textarea name="textarea" placeholder="Massage"></textarea>-->
+                            <!--                </div>-->
+                            <!--            </div>-->
+                            <!--            <div class="col-lg-12">-->
+                            <!--                <div class="submit-button text-center">-->
+                            <!--                    <button class="btn-large btn-primary" type="submit"> Submit Now <i class="icofont-long-arrow-right"></i></button>-->
+                            <!--                </div>-->
+                            <!--            </div>-->
+                            <!--        </div>-->
+                            <!--    </form>-->
+                            <!--</div>-->
+                            <!-- Comment Area End -->
+
+
+                        </div>
+                    </div><!-- blog details Post End -->
+
+                <%= link_to 'Return to articles listing', articles_path%>
+                
+            </div>
+        </div> <!-- Blog Details Wrapper End -->
+
     
-    <p><strong>Title: </strong><%= @article.title %></p>
-    <p><strong>Description: </strong><%= @article.description %></p>
-    
-    <%= link_to 'Edit', edit_article_path(@article)%> 
-    <%= link_to 'Delete', article_path(@article), data: { "turbo-method": :delete, "turbo-confirm": "Are you sure?" } %> 
-    <%= link_to 'Return to articles listing', articles_path%> 
 
     </div>
 </div>

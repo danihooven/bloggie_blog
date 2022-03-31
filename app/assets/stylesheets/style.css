@@ -9348,6 +9348,7 @@ input[type="checkbox"] {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  /*flex-direction: column;*/
 }
 
 .blog-details-meta-box .post-meta-left-side, .blog-details-meta-box .post-mid-side {
@@ -9403,6 +9404,12 @@ input[type="checkbox"] {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+.blog-details-thumb > img {
+  display: block;
+  padding: 40px;
+  margin: auto;
 }
 
 .blockquote-box {
