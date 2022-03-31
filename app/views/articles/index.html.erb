@@ -46,9 +46,16 @@
                 </div><!-- Single Following Post End -->
             </div>
             <% end %>
+            
+            <%= link_to new_article_path do %>
+            <p class="text-center">
+                Create new article <i class="icofont-plus"></i> 
+            </p>
+            <% end %>
+            
         </div>
     </div>
 </div> <!-- Blog Details Wrapper End -->
 
 
-<p><%= link_to 'Create new article', new_article_path %></p>
+

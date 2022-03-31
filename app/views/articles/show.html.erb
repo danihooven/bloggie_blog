@@ -90,7 +90,11 @@
                         </div>
                     </div><!-- blog details Post End -->
 
-                <%= link_to 'Return to articles listing', articles_path%>
+                <%= link_to articles_path do %>
+                    <p class="text-center">
+                        <i class="icofont-arrow-left"></i> Return to articles listing
+                    </p>
+                <% end %>
                 
             </div>
         </div> <!-- Blog Details Wrapper End -->
