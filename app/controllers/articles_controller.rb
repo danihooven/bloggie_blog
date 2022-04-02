@@ -2,22 +2,38 @@ class ArticlesController < ApplicationController
    
     before_action :set_article, only: [:show, :edit, :update, :destroy]
     
+    
+    
+    
     def show
     end
+    
+    
+    
     
     def index
         @articles = Article.all
     end
     
+    
+    
+    
     def edit
     end
+    
+    
+    
     
     def new
         @article = Article.new
     end
     
+    
+    
+    
     def create
         @article = Article.new(article_params)
+        @article.user = User.first
         
         respond_to do |format|
             if @article.save
@@ -27,6 +43,9 @@ class ArticlesController < ApplicationController
             end
         end
     end
+    
+    
+    
     
     def update
         
@@ -38,6 +57,8 @@ class ArticlesController < ApplicationController
                 end
             end
     end
+    
+    
     
     def destroy
         @article.destroy
