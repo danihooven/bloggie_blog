@@ -16,6 +16,28 @@ class UsersController < ApplicationController
         end
     end
     
+    
+    
+    
+    def edit
+        @user = User.find(params[:id])
+    end
+    
+    
+    
+    def update
+        @user = User.find(params[:id])
+        respond_to do |format|
+            if @user.update(user_params)
+                format.html {redirect_to articles_path, notice: 'Account was updated successfully' }
+            else
+                format.html {render :edit, status: :unprocessable_entity}
+            end
+        end
+    end    
+     
+     
+     
      
     private
     def user_params
