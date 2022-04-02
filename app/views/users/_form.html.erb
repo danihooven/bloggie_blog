@@ -1,0 +1,51 @@
+<%= render 'shared/errors', obj: @user %>
+
+
+<%= form_with(model: @user, local: true) do |f|%>
+
+                    <div class="login-content">
+                    
+                    
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 m-auto">
+                                <!--Username-->
+                                <div class="write-content-box">
+                                    <%= f.text_field :username, :placeholder => "Username" %>
+                                </div>
+                                
+                                <!--Email Address-->
+                                <div class="write-content-box">
+                                    <%= f.email_field :email, :placeholder => "Email Address" %>
+                                </div>
+                                
+                                <!--Password-->
+                                <div class="write-content-box">
+                                    <%= f.password_field :password, :placeholder => "Password" %>
+                                </div>
+
+                                <!--Terms and Conditions-->
+                                <div class="remember-forget-wrap col-12 justify-content-center section-space--pt_60">
+                                    <div class="remember-wrap">
+                                        <input type="checkbox">
+                                        <p>Agree to the <a href="#">Terms and Conditions</a></p>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                </div>
+                                
+                                <!--Register Button-->
+                                <div class="conditon-buttom-wrap">
+                                    <div class="button-box mt-4">
+                                        <%= f.submit "Sign Up", class:"btn-large btn-primary" %>
+                                    </div>
+                                </div>
+                                
+                                <!--Login Link-->
+                                <%= link_to '#' do %>
+                                    <p class="text-center">
+                                        Already a member? Log in now
+                                    </p>
+                                <% end %>
+                            </div>
+                        </div>
+                    </div>
+<% end %>

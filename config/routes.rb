@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   root 'pages#home' #home page view at root
   get 'about', to: 'pages#about' #about page view
   resources :articles # all routes for articles
+  get 'signup', to: 'users#new'
+  resources :users, except: [:new]
 end
