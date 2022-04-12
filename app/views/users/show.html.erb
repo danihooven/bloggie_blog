@@ -1,0 +1,106 @@
+<div class="blog-details-wrapper section-space--pb_60">
+    <div class="container">
+        
+        <div class="row row--17">
+                <!--<div class="share-thinking-title">-->
+                <!--    <h2 class="title text-center"><%= @user.username %>'s Profile</h2>-->
+                <!--    </div>-->
+                        <div class="blog-details-col-8">
+
+                            <!--<div class="messonry-button section-space--mb_40">-->
+                            <!--    <button data-filter="*" class="is-checked"><span class="filter-text">All</span></button>-->
+                            <!--    <button data-filter=".cat--1"><span class="filter-text">Travel</span> </button>-->
+                            <!--    <button data-filter=".cat--2"><span class="filter-text">Lifestyle</span></button>-->
+                            <!--    <button data-filter=".cat--3"><span class="filter-text">Food</span> </button>-->
+                            <!--    <button data-filter=".cat--4"><span class="filter-text">Health</span></button>-->
+                            <!--</div>-->
+
+                            <div class="masonry-activation">
+                                <div class="row mesonry-list">
+                                    <div class="masonary-sizer col-1"></div>
+                                    <!-- Author Blog Post Wrap Start -->
+                                    <% @articles.each do |article| %>
+                                    <div class="author-blog-post-wrap masonary-item cat--3">
+                                        <a href="blog-details.html" class="author-blog-thum">
+                                            <%= link_to article_path(article), class:"following-post-thum" do %>
+                                                <%= image_tag("blog/blog-details-1.jpg", :alt => "meditation") %>
+                                            <% end %>
+                                        </a>
+                                        <div class="author-blog-post-content">
+                                            <div class="blog-details-meta-box">
+                                                <div class="post-meta-left-side mb-2">
+                                                    <div class="blog-post-category">
+                                                        <a href="#" class="btn-medium business mr-1">Business</a>
+                                                    </div>
+                                                    <div class="blog-post-author">
+                                                        By <%= article.user.username if article.user %>                                                    
+                                                    </div>
+                                                </div>
+                                                <div class="post-right-side mb-2">
+                                                    <span class="post-meta-left-side">
+                                                    <span class="post-date">
+                                                        <%= article.created_at.strftime("%B %d, %Y") %>
+                                                    </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <h3 class="title mb-2">
+                                                <%= link_to article.title,  article_path(article) %>
+                                            </h3>
+                                            <p class="mb-2"><%= simple_format(article.description) %></p>
+
+                                            <div class="author-post-action-box justify-content-end">
+                                                <div class="author-post-action-box">
+                                                    <div class="author-action">
+                                                        <%= link_to edit_article_path(article) do%><i class="icofont-edit-alt"></i><% end %>
+                                                    </div>
+                                                    <div class="author-action">
+                                                        <%= link_to article_path(article), data: {"turbo-method": :delete, "turbo-confirm": "Are you sure?" } do%><i class="icofont-ui-delete"></i><% end %>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- Author Blog Post Wrap End -->
+                                    <% end %>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Author Area-->
+                        <div class="blog-details-col-4 sticky-top">
+                            <div class="following-author-area">
+                                <!--<div class="author-image" data-aos="fade-up">-->
+                                    <%= gravatar_for @user, size:200 %>
+                                <!--</div>-->
+                                <div class="author-title">
+                                    <h4><%= @user.username %></h4>
+                                    <p>Author, Dani Hooven</p>
+                                </div>
+                                <div class="author-details">
+                                    <p>Web Dev Enthusiast and Baker Extraordinar. Technical skills are my forte. I hate writing.</p>
+
+                                    <div class="author-post-share">
+                                        <ul class="social-share-area">
+                                            <li><%= link_to "https://www.facebook.com", :target => "_blank" do%><i class="icofont-facebook"></i><% end %></li>                            
+                                            <li><%= link_to "https://www.instagram.com", :target => "_blank" do%><i class="icofont-instagram"></i><% end %></li>                            
+                                            <li><%= link_to "https://www.twitter.com", :target => "_blank" do%><i class="icofont-twitter"></i><% end %></li>                            
+                                            <li><%= link_to "https://www.linkedin.com", :target => "_blank" do%><i class="icofont-linkedin"></i><% end %></li>     
+                                        </ul>
+                                    </div>
+
+                                    <!--<div class="button-box">-->
+                                    <!--    <a href="#" class="btn">View Profile <i class="icofont-long-arrow-right"></i></a>-->
+                                    <!--</div>-->
+                                </div>
+                            </div>
+                        
+                    
+                    
+
+            </div>
+        </div>
+
+        
+        
+    </div>
+</div>
