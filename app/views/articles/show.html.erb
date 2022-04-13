@@ -31,8 +31,7 @@
                                     </div>
                                     <!--Author-->
                                     <div class="following-blog-post-author">
-                                         By <%= article.user.username if article.user %>
-                                    </div>
+                                     By <%= link_to @article.user.username, user_path(@article.user) %>                                    </div>
                                 </div>
 
                                 <div class="post-meta-right-side mb-2">

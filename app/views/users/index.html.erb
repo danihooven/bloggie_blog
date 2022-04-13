@@ -1,0 +1,83 @@
+<div class="share-your-thinking-area">
+    <div class="container">
+        
+        <div class="row section-space--pb_60">
+            <div class="col-12">
+                <div class="share-thinking-title">
+                    <h2 class="title text-center">About Us</h2>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bunzo History Area Start -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bunzo-row">
+                            <div class="bunzo-col-6"> <!-- data-aos="fade-up" -->
+                                <h2 class="bunzo-history-title">It's a <span class="f-w-bold">Bloggie Blog</span> World</h2>
+                            </div>
+                            <div class="bunzo-col-6">
+                                <div class="single-history-item"> <!-- data-aos="fade-up" -->
+                                    <h3 class="title mb-20">Mission & Vission</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                        industry. Lorem Ipsum has been the industry's standard dummy text eve
+                                        since the 1500 when an unknown printer took a galley type scrambled’s
+                                        make a type specimen book. It has survived not only five centuries
+                                        also the leap into electronic typesetting.
+                                    </p>
+                                </div>
+                                <div class="single-history-item"> <!-- data-aos="fade-up" -->
+                                    <h3 class="title mb-20">Bloggie History</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                        industry. Lorem Ipsum has been the industry's standard dummy text eve
+                                        since the 1500 when an unknown printer took a galley type scrambled’s
+                                        make a type specimen book. It has survived not only five centuries
+                                        also the leap into electronic typesetting.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bunzo History Area End -->
+        
+        <!-- Team Aare Start -->
+            <div class="team-area section-space--ptb_100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title text-center"> <!-- data-aos="fade-up" -->
+                                <h6 class="sub-title-primary mb-20">They're all cool.</h6>
+                                <h2 class="title">Meet the Authors</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <% @users.each do |user| %>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <!-- Single Team Area Start -->
+                            <div class="single-team-area"> <!-- data-aos="fade-up" -->
+                                <div class="team-thum">
+                                    <%= link_to gravatar_for(user, size:350), user %>
+                                </div>
+                                <div class="team-content justify-content-end">
+                                    <div class="team-member-info">
+                                        <h6 class="name-title"><%= link_to user.username, user %></h6>
+                                        <p class="desination">Awesome Person</p>
+                                        <p class="desination"><%= pluralize(user.articles.count, "article")%>
+                                        <br> Joined <%= time_ago_in_words(user.created_at) %>ago</p>
+                                        <p class="destination" style="color:#ffc4a0;"><%= link_to edit_user_path(user) do%><i class="icofont-edit-alt"></i><% end %></p>
+                                    </div>
+                                </div>
+                            </div><!-- Single Team Area End -->
+                        </div>
+                        
+                    <% end %>
+                    </div>
+            <!-- Team Aare End -->
+
+        
+    </div>
+</div>
