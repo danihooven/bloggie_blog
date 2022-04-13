@@ -38,7 +38,7 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
         respond_to do |format|
             if @user.update(user_params)
-                format.html {redirect_to articles_path, notice: 'Account was updated successfully' }
+                format.html {redirect_to user_path, notice: 'Account was updated successfully' }
             else
                 format.html {render :edit, status: :unprocessable_entity}
             end
