@@ -1,0 +1,46 @@
+<div class="share-your-thinking-area">
+    <div class="container">
+        
+        <div class="row section-space--pb_60">
+            <div class="col-12">
+                <div class="share-thinking-title">
+                    <h2 class="title text-center">Login</h2>
+                </div>
+            </div>
+        </div>
+
+        <%= form_with scope: :session, url: login_path, local: true do |f|%>
+
+                    <div class="login-content">
+                    
+                    
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 m-auto">
+                                                                
+                                <!--Username-->
+                                <div class="write-content-box">
+                                    <%= f.text_field :username, :placeholder => "Enter Username" %>
+                                </div>
+                                
+                                <!--Password-->
+                                <div class="write-content-box">
+                                    <%= f.password_field :password, :placeholder => "Enter Password" %>
+                                </div>
+
+                                
+                                
+                                <!--Register Button-->
+                                <div class="conditon-buttom-wrap">
+                                    <div class="button-box mt-4">
+                                        <%= f.submit "Login", class:"btn-large btn-primary" %>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+        <% end %>
+        
+    </div>
+</div>
