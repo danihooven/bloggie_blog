@@ -62,7 +62,7 @@
                                 <div class="team-thum">
                                     <%= link_to gravatar_for(user, size:350), user %>
                                 </div>
-                                <div class="team-content justify-content-end">
+                                <div class="team-content justify-content-center">
                                     <div class="team-member-info">
                                         <h6 class="name-title"><%= link_to user.username, user %></h6>
                                         <p class="desination">Awesome Person</p>
@@ -73,8 +73,15 @@
                                 </div>
                             </div><!-- Single Team Area End -->
                         </div>
-                        
                     <% end %>
+                        <div class="testimonial-slider-navigation-two">
+                            <%= will_paginate @users, 
+                                list_classes: %w(pagination justify-content-center border-0), 
+                                :page_links => false, 
+                                :previous_label => '<div class="testimonial-button-next navigation-button"><i class="icofont-long-arrow-left"></i></div>',
+                                :next_label => '<div class="testimonial-button-prev navigation-button"><i class="icofont-long-arrow-right"></i></div>'
+                            %>
+                        </div>
                     </div>
             <!-- Team Aare End -->
 

@@ -62,6 +62,7 @@
                                         </div>
                                     </div><!-- Author Blog Post Wrap End -->
                                     <% end %>
+                                
                                 </div>
                             </div>
                         </div>
@@ -96,6 +97,15 @@
                     
                     
 
+            </div>
+            
+            <div class="testimonial-slider-navigation-two">
+                <%= will_paginate @articles, 
+                    list_classes: %w(pagination justify-content-center border-0), 
+                    :page_links => false, 
+                    :previous_label => '<div class="testimonial-button-next navigation-button"><i class="icofont-long-arrow-left"></i></div>',
+                    :next_label => '<div class="testimonial-button-prev navigation-button"><i class="icofont-long-arrow-right"></i></div>'
+                %>
             </div>
         </div>
 

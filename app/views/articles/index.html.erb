@@ -1,4 +1,3 @@
-<!-- Blog Details Wrapper Start -->
 <div class="blog-details-wrapper">
     <div class="container">
         <!--Title-->
@@ -47,12 +46,22 @@
             </div>
             <% end %>
             
-            <%= link_to new_article_path do %>
-            <p class="text-center">
-                Create new article <i class="icofont-plus"></i> 
-            </p>
-            <% end %>
             
+            <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center align-items-center">
+                <%= link_to new_article_path do %>
+                    <div class="btn-primary btn-large">
+                        Create new article <i class="icofont-plus"></i>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+        <div class="testimonial-slider-navigation-two">
+            <%= will_paginate @articles, 
+                list_classes: %w(pagination justify-content-center border-0), 
+                :page_links => false, 
+                :previous_label => '<div class="testimonial-button-next navigation-button"><i class="icofont-long-arrow-left"></i></div>',
+                :next_label => '<div class="testimonial-button-prev navigation-button"><i class="icofont-long-arrow-right"></i></div>'
+            %>
         </div>
     </div>
 </div> <!-- Blog Details Wrapper End -->

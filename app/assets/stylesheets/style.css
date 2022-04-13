@@ -9286,6 +9286,11 @@ input[type="checkbox"] {
     27. Blog Details Area Css
 ====================================*/
 
+.page-link {
+  border-width: 0;
+}
+
+
 .blog-details-col-8 {
   max-width: 847px;
   -webkit-box-flex: 0;
