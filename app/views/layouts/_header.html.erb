@@ -20,13 +20,14 @@
                            <% end %>   
                         </div>
                     </div>
-                    <!--Top Right Icons-->
+                    <!--Sign Up / Log In Top Right Icons-->
                     <div class="col-lg-3 col-md-4 col-7">
                         <div class="header-mid-right-side">
-                            <!--<%= link_to image_tag("icons/plus.png", :alt => "Add Article Icon"), root_path, class:"single-action-item"  %>-->
-                            <!--<%= link_to image_tag("icons/user.png", :alt => "User Icon"), signup_path, class:"single-action-item"  %>-->
-                            <%= link_to 'Sign Up', signup_path, class:"btn-primary btn-large me-0" %>
-                            <!--<%= link_to 'Log Out', logout_path,data: {"turbo-method": :delete}, class:"btn-primary btn-large me-0" %>-->
+                            <% if logged_in? %>
+                                <%= link_to 'Log Out', logout_path,data: {"turbo-method": :delete}, class:"btn-primary btn-large me-0" %>
+                            <% else %>
+                                <%= link_to 'Sign Up', signup_path, class:"btn-primary btn-large me-0" %>
+                            <% end %>
 
                         </div>
                   </div>
