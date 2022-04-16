@@ -71,7 +71,9 @@
                                         <%= link_to articles_path do%><span>Articles</span><% end %>
                                         <ul class="submenu">
                                             <li><%= link_to articles_path do%><span>View Articles</span><% end %></li>
-                                            <li><%= link_to new_article_path do%><span>Create New Article</span><% end %></li>
+                                            <% if logged_in? %>
+                                                <li><%= link_to new_article_path do%><span>Create New Article</span><% end %></li>
+                                            <% end %>
                                         <!--    <li><%= link_to articles_path do%><span>Travel</span><% end %></li>-->
                                         <!--    <li><%= link_to articles_path do%><span>Health</span><% end %></li>-->
                                         <!--    <li><%= link_to articles_path do%><span>Tech</span><% end %></li>-->
