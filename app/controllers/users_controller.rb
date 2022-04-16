@@ -32,8 +32,8 @@ class UsersController < ApplicationController
     def destroy
         @user.destroy
         respond_to do |format|
-            session[:user_id] = nil
-            format.html {redirect_to root_path, notice: "Account and all associated articles successfully deleted"}
+            reset_session
+            format.html {redirect_to articles_path, notice: "Account and all associated articles successfully deleted", status: :see_other}
         end
     end
     
